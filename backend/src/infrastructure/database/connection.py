@@ -40,7 +40,7 @@ async def init_db() -> None:
     Call this on application startup (e.g. lifespan context manager).
     """
     # Import models here so SQLModel registers them before creating tables
-    from .models import Contact, Company, CompanyContact  # noqa: F401
+    from .models import Contact, Company  # noqa: F401
 
     async with engine.begin() as conn:
         # Create all tables registered with SQLModel
