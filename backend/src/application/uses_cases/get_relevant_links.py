@@ -1,5 +1,7 @@
 from typing import List
-from src.application.uses_cases.ports.ports import ScraperPort, ParserPort, LinkClassifierPort
+from src.application.uses_cases.ports.scraper_port import ScraperPort
+from src.application.uses_cases.ports.parser_port import ParserPort
+from src.application.uses_cases.ports.link_classify_relenvant_port import LinkClassifierPort
 from src.domain.services.company_domain_service import CompanyDomainService
 
 class GetRelevantLinks:

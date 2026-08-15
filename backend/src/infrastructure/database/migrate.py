@@ -1,9 +1,4 @@
 import asyncio
-import os
-import sys
-
-# Add src to the path so modules can be resolved
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 
 from src.infrastructure.database.connection import recreate_db
 

@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.domain.entities import Contact
+from src.domain.entities.contact import Contact
 from typing import List, Optional
 
 

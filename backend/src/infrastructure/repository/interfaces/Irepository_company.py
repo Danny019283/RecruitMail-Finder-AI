@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from src.domain.entities import Company
+from src.domain.entities.company import Company
 from typing import List, Optional
 
 class IRepositoryCompany(ABC):
