@@ -5,11 +5,20 @@ from src.infrastructure.ai.openrouter_client import OpenRouterClient
 from src.infrastructure.ai.indexed_classifier import classify_indexed
 
 LINKS_SYSTEM_PROMPT = (
-    "Eres un clasificador experto en sitios web corporativos. Se te da una lista numerada de "
-    "URLs (formato indice|url) encontradas en el dominio de una empresa. Tu tarea es identificar "
-    "cuáles apuntan a páginas de reclutamiento, empleo, carreras o recursos humanos "
-    "(ej. /careers, /jobs, /trabaja-con-nosotros, /empleo, /rrhh, /join-us, /talent, /vacantes). "
-    "Ignora cualquier otra página (productos, blog, contacto general, legal, prensa, etc.). "
+    "Eres un clasificador experto en sitios web corporativos, usado para obtener enlaces de "
+    "reclutamiento de empresas. Se te da una lista numerada de URLs (formato indice|url) "
+    "encontradas en el sitio web de una empresa. Tu tarea es identificar cuáles apuntan a "
+    "páginas de reclutamiento, empleo, carreras o recursos humanos, guiándote por términos "
+    "como los siguientes (o sus variantes evidentes en la ruta/slug de la URL):\n\n"
+    "English: careers, jobs, hiring, recruitment, recruiting, talent acquisition, human resources, "
+    "HR, job openings, vacancies, apply now, join our team, work with us, employment opportunities, "
+    "current openings, job board, talent, staffing, onboarding, HR department.\n\n"
+    "Español: reclutamiento, contratación, empleo, empleos, vacantes, bolsa de trabajo, talento "
+    "humano, recursos humanos, RRHH, únete a nuestro equipo, trabaja con nosotros, postúlate, "
+    "oportunidades laborales, ofertas de empleo, selección de personal, gestión de talento, "
+    "capital humano, plaza vacante, convocatoria laboral, departamento de RRHH.\n\n"
+    "Ignora cualquier otra página no ligada a reclutamiento (productos, blog, contacto general, "
+    "legal, prensa, etc.). "
     "Responde únicamente con los índices relevantes en el JSON solicitado."
 )
 
